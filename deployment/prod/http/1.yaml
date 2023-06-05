@@ -3,7 +3,7 @@ fiber:
   applicationArg:
     daysAgo: 900
     kafkaServers: kafka.default.svc.cluster.local:9092
-    kafkaTopic: dview-destination.BAPI.artemis.source_details, dview-destination.BAPI.dex.keys
+    kafkaTopic: workden91-com.marketing.http.rest_api pipeline
     metastoreURL: http://kaas-metastore
     executionCheckpointingInterval: 5min
   fileDetails:
@@ -14,3 +14,9 @@ fiber:
     fileSecretKey: empty
     fileAccessKey: empty
 sourceDetailsId: 1
+kafka:
+  kafkaBrokers: kafka
+  kafkaPort: 9092
+  securityProtocol: PLAINTEXT
+  zookeeper: zookeeper-kafka
+  zookeeperPort: 2181
