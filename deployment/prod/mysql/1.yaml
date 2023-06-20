@@ -1,7 +1,7 @@
 maxwell:
   replicaCount: 1
-  orgName: dummy
-  tenantName: dummy
+  orgName: workden91-com
+  tenantName: data-platform
   service:
     type: ClusterIP
     port: 80
@@ -10,7 +10,7 @@ fiber:
   applicationArg:
     daysAgo: 900
     kafkaServers: kafka.default.svc.cluster.local:9092
-    kafkaTopic: dview-destination.BAPI.artemis.source_details, dview-destination.BAPI.dex.keys
+    kafkaTopic: workden91-com.data-platform.artemis.pipeline
     metastoreURL: http://kaas-metastore
     executionCheckpointingInterval: 5min
   fileDetails:
@@ -20,3 +20,10 @@ fiber:
     fileEndpoint: https://s3.ap-south-1.amazonaws.com/
     fileSecretKey: empty
     fileAccessKey: empty
+kafka:
+  kafkaBrokers: kafka
+  kafkaPort: 9092
+  securityProtocol: PLAINTEXT
+  zookeeper: zookeeper-kafka
+  zookeeperPort: 2181
+sourceDetailsId: 1
