@@ -1,0 +1,22 @@
+fiber:
+  logType: INFO
+  applicationArg:
+    daysAgo: 900
+    kafkaServers: kafka.default.svc.cluster.local:9092
+    kafkaTopic: workden91-com.marketing.http.rest_api pipeline
+    metastoreURL: http://kaas-metastore
+    executionCheckpointingInterval: 5min
+  fileDetails:
+    provideExplicitly: false
+    fileBucket: dview-nrt
+    fileRegion: ap-south-1
+    fileEndpoint: https://s3.ap-south-1.amazonaws.com/
+    fileSecretKey: empty
+    fileAccessKey: empty
+sourceDetailsId: 1
+kafka:
+  kafkaBrokers: kafka
+  kafkaPort: 9092
+  securityProtocol: PLAINTEXT
+  zookeeper: zookeeper-kafka
+  zookeeperPort: 2181
